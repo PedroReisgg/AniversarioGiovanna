@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<title>Feliz aniversário, Giovanna ♥</title>
+<meta name="description" content="Um presente feito com amor por Pedro, para os 19 anos da Giovanna.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<!-- SVG defs: girassol e coração -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="heart" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.3C.3 8.3 2.2 4.5 5.9 4.1 8.1 3.9 10 5 12 7.2c2-2.2 3.9-3.3 6.1-3.1 3.7.4 5.6 4.2 3.9 7.6C19.5 16.4 12 21 12 21z"/></symbol>
+    <symbol id="heart-o" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" d="M12 20s-7-4.3-9.3-8.7C1.2 8.2 3 4.9 6.1 4.6 8.1 4.4 10 5.5 12 7.6c2-2.1 3.9-3.2 5.9-3 3.1.3 4.9 3.6 3.4 6.7C19 15.7 12 20 12 20z"/></symbol>
+    <symbol id="sunflower" viewBox="-100 -100 200 200">
+      <g id="petals"></g>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- 0. Tela preta de entrada -->
+<div id="intro" aria-label="Abertura">
+  <div class="door door-l"></div>
+  <div class="door door-r"></div>
+  <div class="intro-name">
+    <span class="intro-word">Giovanna</span>
+    <svg class="intro-heart"><use href="#heart"/></svg>
+  </div>
+  <p class="intro-hint">toque para abrir</p>
+</div>
+
+<!-- 1. Pré-abertura: Feliz aniversário -->
+<section id="gift" aria-label="Feliz aniversário">
+  <div class="gift-hearts" aria-hidden="true">
+    <svg class="fh fh1"><use href="#heart"/></svg>
+    <svg class="fh fh2"><use href="#heart"/></svg>
+    <svg class="fh fh3"><use href="#heart"/></svg>
+    <svg class="fh fh4"><use href="#heart"/></svg>
+    <svg class="fh fh5"><use href="#heart"/></svg>
+  </div>
+  <div class="gift-inner">
+    <div class="gift-blob" aria-hidden="true"></div>
+    <div class="cake-badge" aria-hidden="true">
+      <svg viewBox="0 0 48 48" width="46" height="46"><g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M24 7c-2 2.5-2 4.4 0 5.6 2-1.2 2-3.1 0-5.6z" fill="#fff"/><path d="M24 13v6"/><rect x="10" y="19" width="28" height="10" rx="2"/><rect x="8" y="29" width="32" height="10" rx="2"/><path d="M10 24c3 2 5 2 7 0s5-2 7 0 5 2 7 0 5-2 7 0"/></g></svg>
+    </div>
+    <p class="eyebrow gift-date">19 anos · Giovanna</p>
+    <h1 class="gift-title"><span class="line">Feliz</span> <span class="line">aniversário,</span> <em class="line">meu amor</em></h1>
+    <p class="gift-text">Eu desejo tudo de bom pra você. Eu fiz isso aqui pra te contar um pouco da nossa história, de tudo que a gente viveu até aqui.</p>
+    <p class="gift-quote">E pra te lembrar que eu sou muito feliz ao seu lado.</p>
+    <button class="btn btn-primary" id="openGift"><span>Abrir meu presente</span><svg class="ico"><use href="#heart-o"/></svg></button>
+    <p class="micro">com amor, Pedro</p>
+  </div>
+</section>
+
+<!-- Camada fixa de girassóis (aparece no pedido) -->
+<div id="sunflowers" aria-hidden="true"></div>
+
+<main id="main">
+
+  <!-- 2. Abertura -->
+  <section id="abertura" class="sec">
+    <div class="bubble b1" data-speed="0.6"></div>
+    <div class="bubble b2" data-speed="0.3"></div>
+    <p class="eyebrow center" data-reveal>Para Giovanna</p>
+    <div class="arch-wrap">
+      <svg class="float-heart h-a" data-speed="1.4"><use href="#heart"/></svg>
+      <svg class="float-heart h-b" data-speed="0.8"><use href="#heart"/></svg>
+      <div class="arch"><img src="img/bochecha.webp" alt="Pedro e Giovanna juntinhos" class="arch-img"></div>
+    </div>
+    <h2 class="display center split"><span>Nossa</span><em>história</em></h2>
+    <p class="lead center" data-reveal>De duas crianças nos Aventureiros até o amor que a gente vive hoje.</p>
+    <button class="btn btn-primary" data-go="#cap1"><span>Começar a nossa história</span><svg class="ico" viewBox="0 0 24 24"><path d="M12 4v15m0 0l-6-6m6 6l6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <p class="micro">Deslize devagar</p>
+  </section>
+
+  <!-- 3. Capítulo 1 -->
+  <section id="cap1" class="sec">
+    <p class="eyebrow" data-reveal>Capítulo 1</p>
+    <h2 class="display split"><span>Quando a gente</span><em>era pequeno</em></h2>
+    <p class="body-text" data-reveal>Tudo começou na igreja de Santo André. A gente era criança, de uniforme dos Aventureiros, correndo pra lá e pra cá nas atividades de sábado. Passamos a época toda dos Aventureiros juntos, e eu nem imaginava que aquela menina ia ser, um dia, o amor da minha vida.</p>
+
+    <div class="duo">
+      <figure class="ph tall reveal-img"><img src="img/aventureiros.webp" alt="Aventureiros em Santo André" loading="lazy"><figcaption>Os Aventureiros, em Santo André</figcaption></figure>
+      <figure class="ph tall up reveal-img"><img src="img/antes-noite.webp" alt="Nós dois, antes de tudo" loading="lazy"><figcaption>Antes de tudo</figcaption></figure>
+    </div>
+
+    <blockquote class="quote-card" data-reveal>“A gente cresceu no mesmo lugar, cantando as mesmas músicas, sem saber que Deus já estava escrevendo a nossa história.”</blockquote>
+
+    <h3 class="sub" data-reveal>Os caminhos se separaram</h3>
+    <p class="body-text" data-reveal>Depois, cada um foi pra um lado. Você continuou em Santo André e depois foi pro Riacho; eu fui pra Rudge Ramos e, depois, pro Riacho também. E foi lá, no Riacho, que a gente se reencontrou.</p>
+    <figure class="ph tilted reveal-img" data-speed="0.15"><img src="img/dez2024.webp" alt="Nós dois em dezembro de 2024" loading="lazy"><figcaption>8 de dezembro de 2024</figcaption></figure>
+
+    <h3 class="sub" data-reveal>Amigos (com umas indiretas)</h3>
+    <p class="body-text" data-reveal>Continuamos amigos. Às vezes um mostrava pro outro que gostava, umas ideias aqui e ali… mas nada acontecia. Ainda.</p>
+    <div class="trio">
+      <figure class="ph sq reveal-img"><img src="img/antes-1.webp" alt="Antes de tudo" loading="lazy"></figure>
+      <figure class="ph sq reveal-img"><img src="img/antes-3.webp" alt="Antes de tudo" loading="lazy"></figure>
+      <figure class="ph sq reveal-img"><img src="img/antes-2.webp" alt="Antes de tudo" loading="lazy"></figure>
+    </div>
+    <p class="micro center" data-reveal>continua…</p>
+  </section>
+
+  <!-- 4. Capítulo 2: linha do tempo -->
+  <section id="cap2" class="sec">
+    <p class="eyebrow" data-reveal>Capítulo 2</p>
+    <h2 class="display split"><span>A gente foi</span><em>crescendo</em></h2>
+    <p class="body-text" data-reveal>Cada fase, um passo a mais até aqui.</p>
+
+    <div class="timeline">
+      <div class="tl-line"><div class="tl-fill"></div></div>
+
+      <article class="tl-item">
+        <span class="tl-dot"></span>
+        <p class="tl-date">Virada de 2025 para 2026</p>
+        <h3 class="tl-title">No terraço do prédio</h3>
+        <div class="night-card reveal-img">
+          <div class="stars"></div>
+          <div class="fw fw1"></div><div class="fw fw2"></div><div class="fw fw3"></div>
+          <p class="night-year">2026</p>
+          <p class="night-text">“Esse ano eu quero ela.”</p>
+        </div>
+        <p class="body-text">Na virada do ano, lá no terraço do meu prédio, eu não parava de pensar em você. Te achava linda demais, uma menina que enchia os meus olhos. Foi ali que eu entendi: eu queria ter algo com você.</p>
+      </article>
+
+      <article class="tl-item">
+        <span class="tl-dot"></span>
+        <p class="tl-date">Final de março de 2026</p>
+        <h3 class="tl-title">A gente começou a conversar</h3>
+        <div class="chat reveal-img">
+          <div class="msg in">oii</div>
+          <div class="msg out">oiii, tudo bem? 😊</div>
+          <div class="msg in">tudo e vc?</div>
+          <div class="msg out">melhor agora</div>
+          <div class="msg in typing"><i></i><i></i><i></i></div>
+        </div>
+        <p class="body-text">Umas conversas a mais, sem nenhuma intenção. Pelo menos era isso que a gente dizia.</p>
+      </article>
+
+      <article class="tl-item">
+        <span class="tl-dot"></span>
+        <p class="tl-date">2 a 5 de abril de 2026</p>
+        <h3 class="tl-title">O acampamento</h3>
+        <div class="duo even">
+          <figure class="ph reveal-img"><img src="img/acampamento.webp" alt="No acampamento, de lenço" loading="lazy"></figure>
+          <figure class="ph reveal-img"><img src="img/lenco.webp" alt="Nós dois com o lenço" loading="lazy"></figure>
+        </div>
+        <p class="body-text">Foi ali, de lenço no pescoço, que tudo mudou. A gente se aproximou de verdade, começou a mostrar um pro outro o carinho que já não cabia mais. Foi no acampamento que a gente se apaixonou.</p>
+      </article>
+
+      <article class="tl-item">
+        <span class="tl-dot big"></span>
+        <p class="tl-date">08/04/2026</p>
+        <h3 class="tl-title">O começo de tudo</h3>
+        <figure class="ph framed reveal-img"><img src="img/comeco.webp" alt="O começo de tudo, 8 de abril" loading="lazy"><figcaption class="hand">o começo de tudo ♥</figcaption></figure>
+        <p class="body-text">Três dias depois do acampamento, a gente saiu pra esclarecer as coisas um pro outro. O que era pra ser só uma conversa virou o primeiro dia da nossa história.</p>
+      </article>
+
+      <article class="tl-item">
+        <span class="tl-dot"></span>
+        <p class="tl-date">Começo de agosto de 2026</p>
+        <h3 class="tl-title">Toy Story</h3>
+        <div class="duo even">
+          <figure class="ph reveal-img"><img src="img/toy1.webp" alt="Na exposição do Toy Story" loading="lazy"></figure>
+          <figure class="ph reveal-img"><img src="img/toy2.webp" alt="You've got a friend in me" loading="lazy"></figure>
+        </div>
+        <p class="body-text">“Você tem um amigo em mim.” E muito mais do que um amigo.</p>
+      </article>
+
+      <article class="tl-item">
+        <span class="tl-dot"></span>
+        <p class="tl-date">22/08/2026</p>
+        <h3 class="tl-title">A conversa com os seus pais</h3>
+        <p class="body-text">Fui pedir aos seus pais a permissão pra namorar você. Coração na boca, mão suando… e eles deixaram. Pra comemorar, a gente foi pro Dopamine Land.</p>
+        <div class="dopa">
+          <figure class="ph reveal-img"><img src="img/dopa1.webp" alt="Dopamine Land" loading="lazy"></figure>
+          <figure class="ph reveal-img"><img src="img/dopa3.webp" alt="Dopamine Land" loading="lazy"></figure>
+          <figure class="ph reveal-img"><img src="img/dopa2.webp" alt="Dopamine Land" loading="lazy"></figure>
+          <figure class="ph reveal-img"><img src="img/dopa4.webp" alt="Dopamine Land" loading="lazy"></figure>
+        </div>
+      </article>
+
+      <article class="tl-item last">
+        <span class="tl-dot sun"></span>
+        <p class="tl-date">06/09/2026 · 10h</p>
+        <h3 class="tl-title">O pedido</h3>
+        <p class="body-text">E aí chegou o dia mais lindo de todos…</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 5. O pedido (amarelo + girassóis) -->
+  <section id="pedido" class="sec">
+    <p class="eyebrow center" data-reveal>06 de setembro de 2026 · 10h da manhã</p>
+    <h2 class="display center split"><span>O dia em que</span><em>você disse sim</em></h2>
+    <figure class="ph hero-ph reveal-img"><img src="img/pedido1.webp" alt="No campo de girassóis, no dia do pedido" loading="lazy"></figure>
+    <p class="body-text center" data-reveal>Às 10h da manhã, no meio de um campo inteiro de girassóis, a sua flor favorita, eu te perguntei se você queria namorar comigo.</p>
+    <blockquote class="quote-sun" data-reveal>Os girassóis sempre se viram pro sol. Eu escolhi eles porque é assim que eu me viro pra você, todos os dias.</blockquote>
+    <div class="sun-grid">
+      <figure class="ph reveal-img"><img src="img/pedido2.webp" alt="Beijo no campo de girassóis" loading="lazy"></figure>
+      <figure class="ph reveal-img"><img src="img/girassol-buque.webp" alt="O buquê de girassóis" loading="lazy"></figure>
+      <figure class="ph reveal-img"><img src="img/pedido3.webp" alt="Selfie no campo de girassóis" loading="lazy"></figure>
+      <figure class="ph reveal-img"><img src="img/aneis2.webp" alt="As nossas alianças" loading="lazy"></figure>
+      <figure class="ph wide reveal-img"><img src="img/pedido4.webp" alt="Nós dois entre os girassóis" loading="lazy"></figure>
+    </div>
+    <h2 class="yes" aria-label="Ela disse sim"><span>E</span> <span>ela</span> <span>disse</span> <span class="big">sim</span></h2>
+    <figure class="ph framed sun-frame reveal-img"><img src="img/aneis1.webp" alt="Mãos com as alianças" loading="lazy"><figcaption class="hand">06/09/2026, o nosso sim 🌻</figcaption></figure>
+  </section>
+
+  <!-- 6. Capítulo 3: contador -->
+  <section id="cap3" class="sec">
+    <p class="eyebrow center" data-reveal>Capítulo 3</p>
+    <h2 class="display center split"><span>Juntos há</span><em>exatamente</em></h2>
+    <div class="counter" data-reveal>
+      <div class="cgrid">
+        <div class="cbox dark"><b id="c-anos">0</b><span>anos</span></div>
+        <div class="cbox dark"><b id="c-meses">0</b><span>meses</span></div>
+        <div class="cbox dark"><b id="c-dias">0</b><span>dias</span></div>
+        <div class="cbox"><b id="c-horas">00</b><span>horas</span></div>
+        <div class="cbox"><b id="c-min">00</b><span>minutos</span></div>
+        <div class="cbox"><b id="c-seg">00</b><span>segundos</span></div>
+      </div>
+      <p class="since">desde 06/09/2026, às 10h</p>
+    </div>
+    <div class="duo even mes">
+      <figure class="ph reveal-img"><img src="img/mes1.webp" alt="Um mês de namoro" loading="lazy"><figcaption>1 mês de namoro</figcaption></figure>
+      <figure class="ph reveal-img"><img src="img/mes1-bolo.webp" alt="O nosso bolo de 1 mês" loading="lazy"><figcaption>o nosso bolo ♥</figcaption></figure>
+    </div>
+    <div class="infinity-card" data-reveal>
+      <svg viewBox="0 0 300 140" class="inf">
+        <path class="inf-bg" d="M150 70 C 120 20, 40 20, 40 70 S 120 120, 150 70 S 260 20, 260 70 S 180 120, 150 70 Z"/>
+        <path class="inf-path" d="M150 70 C 120 20, 40 20, 40 70 S 120 120, 150 70 S 260 20, 260 70 S 180 120, 150 70 Z"/>
+        <use href="#heart" x="138" y="58" width="24" height="24" class="inf-heart"/>
+      </svg>
+      <div class="inf-legend"><b>06/09/2026</b><b>para sempre</b></div>
+      <p class="inf-text">Do dia em que você disse sim até o infinito.</p>
+    </div>
+
+    <!-- Player: a nossa música -->
+    <p class="eyebrow center song-eyebrow" data-reveal>A nossa música</p>
+    <div class="player" id="player" data-reveal>
+      <div class="pl-blur" aria-hidden="true"></div>
+      <div class="pl-inner">
+        <div class="pl-cover"><img src="img/capa-iris.webp" alt="Pedro e Giovanna, capa da nossa música"></div>
+        <div class="pl-info">
+          <div>
+            <p class="pl-src">iPhone</p>
+            <p class="pl-title">Iris</p>
+            <p class="pl-artist">The Goo Goo Dolls</p>
+          </div>
+          <div class="pl-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="pl-seek">
+          <input type="range" class="pl-range" id="plSeek" min="0" max="1000" value="0" step="1" aria-label="Posição da música">
+          <div class="pl-times"><span id="plCur">0:00</span><span id="plLeft">-0:00</span></div>
+        </div>
+        <div class="pl-ctrls">
+          <button class="pl-btn" id="plBack" aria-label="Voltar 10 segundos"><svg viewBox="0 0 48 32"><path d="M22 4v24L4 16zM44 4v24L26 16z"/></svg></button>
+          <button class="pl-btn pl-play" id="plPlay" aria-label="Tocar"><svg viewBox="0 0 32 32" class="i-play"><path d="M8 4.5v23a1.5 1.5 0 0 0 2.3 1.3l18-11.5a1.5 1.5 0 0 0 0-2.6l-18-11.5A1.5 1.5 0 0 0 8 4.5z"/></svg><svg viewBox="0 0 32 32" class="i-pause"><rect x="6" y="4" width="7" height="24" rx="1.6"/><rect x="19" y="4" width="7" height="24" rx="1.6"/></svg></button>
+          <button class="pl-btn" id="plFwd" aria-label="Avançar 10 segundos"><svg viewBox="0 0 48 32"><path d="M4 4v24l18-12zM26 4v24l18-12z"/></svg></button>
+          <span class="pl-air" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 19l7 9H9z"/><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M9.5 24.5A11 11 0 1 1 22.5 24.5M12.3 21A6.5 6.5 0 1 1 19.7 21"/></svg></span>
+        </div>
+        <div class="pl-vol">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/></svg>
+          <input type="range" class="pl-range" id="plVol" min="0" max="100" value="80" aria-label="Volume">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h4l5-4v14l-5-4H3z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+        </div>
+      </div>
+      <audio id="plAudio" src="audio/iris-refrao.mp3" preload="metadata"></audio>
+    </div>
+    <p class="song-line" data-reveal>Aperta o play. Toda vez que essa música tocar, é de você que eu tô lembrando.</p>
+  </section>
+
+  <!-- 7. Ela toda linda (principal) -->
+  <section id="linda" aria-label="Ela toda linda">
+    <div class="linda-pin">
+      <div class="linda-head">
+        <p class="eyebrow">A protagonista</p>
+        <h2 class="display"><span>Ela toda</span><em>linda</em></h2>
+      </div>
+      <div class="linda-track">
+        <figure class="lcard"><img src="img/linda7.webp" alt="Giovanna" loading="lazy"><figcaption>Olha isso. Como pode alguém ser tão linda?</figcaption></figure>
+        <figure class="lcard"><img src="img/linda3.webp" alt="Giovanna sorrindo" loading="lazy"><figcaption>Esse sorriso é o meu lugar favorito.</figcaption></figure>
+        <figure class="lcard"><img src="img/linda1.webp" alt="Giovanna" loading="lazy"><figcaption>Eu sou tremendamente apaixonado por você.</figcaption></figure>
+        <figure class="lcard"><img src="img/linda4.webp" alt="Giovanna" loading="lazy"><figcaption>Cada foto sua me deixa sem palavras.</figcaption></figure>
+        <figure class="lcard"><img src="img/linda2.webp" alt="Giovanna" loading="lazy"><figcaption>Linda de qualquer jeito.</figcaption></figure>
+        <figure class="lcard"><img src="img/linda5.webp" alt="Giovanna" loading="lazy"><figcaption>Você é tudo pra mim.</figcaption></figure>
+        <figure class="lcard"><img src="img/linda6.webp" alt="Giovanna" loading="lazy"><figcaption>A menina mais linda do mundo. E é minha.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+  <section class="sec statement">
+    <p class="big-statement">Você é a menina mais especial da minha vida, e eu sou <em>muito</em> apaixonado por você.</p>
+  </section>
+
+  <!-- 8. Bico -->
+  <section id="bico" class="sec">
+    <p class="eyebrow" data-reveal>Patrimônio nacional</p>
+    <h2 class="display split"><span>O famoso</span><em>bico</em></h2>
+    <p class="body-text" data-reveal>Ela faz bico. Bastante bico. E é a coisa mais fofa do universo. (Toque nas fotos.)</p>
+    <div class="bico-grid">
+      <figure class="ph bico reveal-img"><img src="img/bico1.webp" alt="Bico de criança" loading="lazy"><figcaption>desde pequenininha</figcaption></figure>
+      <figure class="ph bico reveal-img"><img src="img/bico3.webp" alt="Bico" loading="lazy"></figure>
+      <figure class="ph bico reveal-img"><img src="img/bico5.webp" alt="Bico" loading="lazy"></figure>
+      <figure class="ph bico reveal-img"><img src="img/bico4.webp" alt="Bico" loading="lazy"></figure>
+      <figure class="ph bico reveal-img"><img src="img/bico2.webp" alt="Bico" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <!-- 9. Motivos que eu te amo -->
+  <section id="motivos" class="sec">
+    <p class="eyebrow" data-reveal>Só alguns de muitos</p>
+    <h2 class="display split"><span>Motivos que</span><em>eu te amo</em></h2>
+    <article class="mcard first" data-reveal>
+      <div class="mimg"><img src="img/linda3.webp" alt="O sorriso dela" loading="lazy"></div>
+      <div class="mtxt"><b>01</b><p>O seu sorriso, que ilumina qualquer lugar e qualquer dia meu.</p></div>
+    </article>
+    <article class="mcard" data-reveal>
+      <div class="mimg"><img src="img/bolo-ela.webp" alt="Ela rindo" loading="lazy"></div>
+      <div class="mtxt"><b>02</b><p>O jeito que você me faz rir até das coisas mais bobas.</p></div>
+    </article>
+    <article class="mcard rev" data-reveal>
+      <div class="mimg"><img src="img/bolo-abraco.webp" alt="Abraço" loading="lazy"></div>
+      <div class="mtxt"><b>03</b><p>O seu abraço, que é o meu lugar preferido no mundo.</p></div>
+    </article>
+    <article class="mcard" data-reveal>
+      <div class="mimg"><img src="img/girassol-sorriso.webp" alt="Nós no campo de girassóis" loading="lazy"></div>
+      <div class="mtxt"><b>04</b><p>O seu coração, a sua fé e o jeito lindo que você cuida das pessoas.</p></div>
+    </article>
+    <div class="more" data-reveal>
+      <p class="more-label">Toque no coração para ver mais um</p>
+      <button class="heart-btn" id="moreBtn" aria-label="Mostrar mais um motivo"><svg><use href="#heart"/></svg></button>
+      <p class="more-text" id="moreText" aria-live="polite">“Porque você é você. E isso já basta.”</p>
+    </div>
+  </section>
+
+  <!-- 10. Stories -->
+  <section id="momentos" class="sec">
+    <p class="eyebrow center" data-reveal>Nossos momentos</p>
+    <h2 class="display center split"><span>Só a gente</span><em>sendo a gente</em></h2>
+    <p class="body-text center" data-reveal>Toque numa bolinha pra ver como stories.</p>
+    <div class="highlights" id="highlights"></div>
+  </section>
+
+  <!-- 11. Mural de polaroids -->
+  <section id="mural" class="sec">
+    <p class="eyebrow" data-reveal>Nosso mural</p>
+    <h2 class="display split"><span>Lembranças</span><em>penduradas</em></h2>
+    <svg class="string" viewBox="0 0 400 30" preserveAspectRatio="none"><path d="M0 4 Q200 34 400 4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    <div class="polas">
+      <figure class="pola" style="--r:-4deg"><img src="img/beijo-pb.webp" alt="Beijo em preto e branco" loading="lazy"><figcaption>meu beijo favorito</figcaption></figure>
+      <figure class="pola" style="--r:3deg"><img src="img/danca.webp" alt="Nós dois arrumados" loading="lazy"><figcaption>nós, chiques</figcaption></figure>
+      <figure class="pola" style="--r:2deg"><img src="img/dentes2.webp" alt="Escovando os dentes juntos" loading="lazy"><figcaption>escovando os dentes 🪥</figcaption></figure>
+      <figure class="pola" style="--r:-3deg"><img src="img/pizza1.webp" alt="Pizza juntos" loading="lazy"><figcaption>noite de pizza 🍕</figcaption></figure>
+      <figure class="pola fav" style="--r:1.5deg"><img src="img/pedido2.webp" alt="O beijo no campo de girassóis" loading="lazy"><figcaption>a minha preferida de todas</figcaption></figure>
+      <figure class="pola" style="--r:-3deg"><img src="img/zoo.webp" alt="Passeio no zoológico" loading="lazy"><figcaption>rolê no zoo</figcaption></figure>
+      <figure class="pola" style="--r:3deg"><img src="img/sorriso1.webp" alt="Sorrindo juntos" loading="lazy"><figcaption>meu sorriso preferido</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- 12. Carta final -->
+  <section id="carta" class="sec">
+    <p class="eyebrow center" data-reveal>Capítulo final</p>
+    <article class="letter" data-reveal>
+      <h2 class="letter-title">Meu amor,</h2>
+      <p>Hoje você faz 19 anos, e eu queria te dar alguma coisa que durasse mais do que um dia. Então eu juntei aqui um pedacinho de tudo que a gente viveu: das crianças de uniforme nos Aventureiros até o campo de girassóis onde você disse sim.</p>
+      <p>Eu fico pensando em como Deus foi cuidadoso com a gente. A gente cresceu na mesma igreja, cada um seguiu um caminho, se reencontrou no Riacho, e no tempo certo tudo fez sentido. Naquela virada de ano, no terraço, eu só pensava em você. Hoje eu tenho o privilégio de te chamar de minha namorada.</p>
+      <p>Você é a menina mais linda que eu já vi, por fora e por dentro. Amo o seu sorriso, o seu jeito, as suas caretas e o seu bico (sim, o bico). Com você tudo fica mais leve: até escovar os dentes ou dividir uma pizza vira um momento que eu quero guardar pra sempre.</p>
+      <p>Eu sou tremendamente apaixonado por você. Você é tudo pra mim. E isso aqui é só o começo: ainda tem muita história pra gente escrever junto.</p>
+      <p>Feliz aniversário, minha Giovanna. Que Deus te abençoe muito nesse novo ano da sua vida. Eu te amo.</p>
+      <p class="sign">Com todo amor,<br>Pedro</p>
+    </article>
+    <figure class="pola last" style="--r:4deg"><img src="img/caminhando.webp" alt="Nós dois caminhando juntos" loading="lazy"><figcaption>pra sempre, lado a lado</figcaption></figure>
+    <button class="btn btn-primary" id="replay"><svg class="ico"><use href="#heart-o"/></svg><span>Ver de novo desde o começo</span></button>
+    <p class="micro center">feito com amor por Pedro</p>
+  </section>
+</main>
+
+<!-- Viewer de stories -->
+<div id="story" aria-modal="true" role="dialog" aria-label="Stories" hidden>
+  <div class="st-bars"></div>
+  <div class="st-head"><span class="st-avatar"></span><b class="st-name"></b><button class="st-close" aria-label="Fechar">✕</button></div>
+  <img class="st-img" alt="">
+  <div class="st-card"><p class="st-meta"></p><p class="st-text"></p><p class="st-hint">Toque para a próxima foto</p></div>
+  <button class="st-prev" aria-label="Foto anterior"></button>
+  <button class="st-next" aria-label="Próxima foto"></button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
