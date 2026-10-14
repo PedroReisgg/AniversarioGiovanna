@@ -156,7 +156,7 @@ body.sunny{background:var(--sun-bg)}
 #pedido .display em{color:var(--sun-d)}
 #pedido .body-text{color:#6b4a14}
 .hero-ph{aspect-ratio:16/10;border:10px solid #fff;box-shadow:0 30px 60px -28px rgba(160,110,0,.55);margin:34px 0 26px}
-.quote-sun{font-family:var(--serif);font-style:italic;font-size:clamp(24px,6.4vw,34px);line-height:1.25;color:var(--brown);
+.quote-sun{font-family:var(--serif);font-style:italic;font-size:clamp(20px,6.4vw,30px);line-height:1.25;color:var(--brown);
   background:rgba(255,255,255,.85);border-radius:var(--r);padding:30px 24px;margin:30px 0;box-shadow:0 20px 40px -24px rgba(160,110,0,.5);border:2px solid #ffe28a}
 .sun-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .sun-grid .ph{aspect-ratio:1;border:6px solid #fff;box-shadow:0 16px 30px -18px rgba(160,110,0,.6)}
