@@ -7,4 +7,4 @@ Ative o GitHub Pages em **Settings → Pages → Branch: main / (root)**. O site
 `https://pedroreisgg.github.io/AniversarioGiovanna/`.
 
 ## A música
-O player toca `audio/iris-refrao.mp3`. Basta subir o arquivo com esse nome na pasta `audio/`.
+O player toca `audio/iris-refrao.mp3` (o primeiro 1:15 de Iris).
